@@ -1,0 +1,114 @@
+
+d1 $ sound "bd"
+
+--
+
+d1 $ sound "bd [bd bd] bd bd"
+
+d1 $ sound "808bd:1 [bd:5 bd:3] bd bd"
+
+d1 $ sound "808bd:1 [bd:5 bd:3] bd [bd bd:4]"
+
+d1 $ sound "bd:3 [jvbass jvbass] bd:4"
+
+d1 $ sound "bd:3 jvbass*2 bd:4"
+
+--
+
+d1 $ sound "[bd, sn:3, numbers, hh:1]"
+
+d1 $ sound "[bd bd bd, flick:6 flick:4 flick:6 flick:4]"
+
+d1 $ sound "[bd, [sn:3 sn:3], numbers, hh:1]"
+
+--
+
+d1 $ sound "<bd sn:3 numbers hh:1>" -- play one sample per cycle
+
+d1 $ sound "<bd sn:3>" -- play one sample per cycle
+
+--
+
+d1 $ sound "808bd:1 808bd:1 808bd:1 808bd:1"
+-- the same as 
+d1 $ sound "808bd:1*4"
+
+d1 $ sound "bd [sn sn]"
+-- the same as 
+d1 $ sound "bd sn*2"
+
+--
+
+d1 $ sound "house:5/2" -- one sample per two cycles
+
+d1 $ sound "house house:5/2"
+
+--
+
+d1 $ sound "[bd ~, sn:1*2, ~ <co co*2>, hh:1/4]"
+
+d1 $ sound "[bd ~, ~ sn:1, <jvbass jvbass:1 bass3:2>*4]"
+
+--
+
+d1 $ sound "arpy arpy:4 arpy:7 arpy:10" -- Major 7 chord arpeggio 
+-- same as 
+d1 $ s "arpy*4" # n "0 4 7 10"
+-- same as
+d1 $ n "0 4 7 10" # s "arpy" 
+
+-- sequencing one octave up and down
+d1 $ n "0..7 6..1" # sound "supercomparator"
+
+--
+
+d1 $ sound "[bd*2, bass3:2*4]"
+
+d1 $ fast 2 $ sound "[bd*2, bass3:2*4]"
+
+d1 $ slow 2 $ sound "[bd*2, bass3:2*4]"
+
+d1 $ fast "<2 4 6>" $ sound "[bd*2, bass3:2*4]" 
+
+d1 $ every 4 (fast 2) $ sound "[bd*2, bass3:2*4]"
+
+--
+
+-- gain default and maximum volume is 1, 0.5 to set to middle
+d1 $ sound "arpy*16" # gain "0.5"
+
+-- stereo panning from left to right, being 0.5 centered
+d1 $ sound "arpy*8" # pan "<0.0 0.5 1>"
+
+-- vowels timbers to pattern
+d1 $ sound "[bd jvbass]*2" # vowel "[a o]"
+
+-- speeds up, down and reverse sample playing
+d1 $ sound "numbers:1" # speed "<4 1 0.125 -1.75>"
+
+--
+
+d1 $ n "[0..7][6..1]" # sound "supercomparator" # cutoff 6000
+
+d1 $ n "[0..7]" # sound "supercomparator" # coarse 20
+
+d1 $ n "[7..0]" # sound "supercomparator" # room 2 # size 0.5
+
+--
+
+-- Some extra examples
+
+d1 $ sound "[bd <jvbass:0*2 jvbass:1*2>]*2" # slow 1.75 (cutoff (scale 100 3000 sine1))
+
+d1 $ n "[0..7]" # s "auto" # pan sine1
+
+d1 $ n "[0..7]" # s "house" # slow 1.75 (cutoff (scale 140 3000 sine1))
+
+d1 $ sound "[bd:3 jvbass bd:4 jvbass, <bass bass5>]"
+# fast 1.5 (bpf (scale 100 3000 sine)) # bandq (scale 0 20 sine)
+# coarse "<1 5 10>"
+
+d1 $ sound "[padlong, linnhats*3]" # crush "<4 10>/4" 
+# slow 8 (bpf (scale 500 5000 sine)) # slow 4 (bandq (scale 1 30 sine)) 
+
+hush
