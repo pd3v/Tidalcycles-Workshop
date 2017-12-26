@@ -1,0 +1,633 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>**TidalCycles** workshop</title>
+
+</head>
+<body>
+<p>slidenumbers: true</p>
+
+<h1><strong>TidalCycles</strong> workshop</h1>
+
+<h4><strong>[2 hours duration]</strong></h4>
+
+<hr />
+
+<h2>What is TidalCycles?</h2>
+
+<h5>TidalCycles is a language (DSL<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>) to create musical and sonic patterns.</h5>
+
+<h5>TidalCycles cooperates with other software in order to work.</h5>
+
+<hr />
+
+<h2>Our Goals</h2>
+
+<p><img src="vector.png" alt="" /></p>
+
+<ul>
+<li>Make it sound</li>
+<li>Create musical patterns</li>
+<li>Transform patterns programmatically</li>
+<li>Add expressiveness with effects</li>
+</ul>
+
+
+<hr />
+
+<h1>"The Trio"</h1>
+
+<ul>
+<li><strong>Tidalcycles</strong></li>
+<li><strong>Supercollider</strong></li>
+<li><strong>Superdirt</strong></li>
+</ul>
+
+
+<h3>and a text editor (<strong>emacs</strong>, <strong>vim</strong>, <strong>atom</strong> or <strong>sublimetext</strong>).</h3>
+
+<hr />
+
+<h2>Supercollider</h2>
+
+<h3>Supercollider is a language, <strong>sclang</strong>, to</h3>
+
+<ul>
+<li>create audio synthesis</li>
+<li>audio effects</li>
+<li>manipulate audio samples</li>
+<li>midi/osc communications</li>
+<li>has its own editor</li>
+<li>runs on a server.</li>
+</ul>
+
+
+<hr />
+
+<h2>SuperDirt</h2>
+
+<h4>An engine/synthesizer that <strong>bridges</strong> Supercollider and Tidalcyles, with custom synths, effects and audio sample libraries.</h4>
+
+<h4><strong>TydalCycles does not make any sound by itself.</strong></h4>
+
+<!-- review also this defintion -->
+
+
+<hr />
+
+<h2>Install &amp; Config</h2>
+
+<h3><a href="https://tidalcycles.org/getting_started.html#installation">Follow the steps to Install &amp; Config</a></h3>
+
+<h4><a href="https://www.youtube.com/watch?v=dJTfGv2sT-w&amp;t=2s">A video for I&amp;C in the Mac</a></h4>
+
+<hr />
+
+<h1>Start SuperDirt</h1>
+
+<p>Now open Supercollider and in the left pane type:</p>
+
+<pre><code>SuperDirt.start;
+</code></pre>
+
+<hr />
+
+<h1>Start SuperDirt</h1>
+
+<p>Keep text cursor in-line and press <strong>[Shift] + [Enter]</strong></p>
+
+<p>Then if SuperDirt is paired with Tidal, SuperDirt is on. In the right pane you'll have this,</p>
+
+<p><img src="file:///Volumes/Data/Tidal%20Projects/Workshop%20TidalCycles/screenshot%20Supercollider%20SuperDirt%20On.png" title="Then if SuperDirt is listening to Tidal then SuperDirt is on." alt="inline 120%" /></p>
+
+<hr />
+
+<h1>Musical and Sonic Patterns</h1>
+
+<p>TidalCycles bases your musical ideas in <strong>patterns</strong>. Something you've heard before and, copy-pasted or with changes, will keep its character in future listenings.</p>
+
+<hr />
+
+<h1>How to create a pattern</h1>
+
+<p>Open the text editor you have chosen to work with Tidal and type the following:</p>
+
+<p><code>haskell
+d1 $ sound "bd"
+</code></p>
+
+<hr />
+
+<h2>How to create a pattern</h2>
+
+<p><code>haskell
+d1 $ sound "bd"
+</code></p>
+
+<p><strong>d1</strong><sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> is a connection to Superdirt.</p>
+
+<p><strong>$</strong> what is on its right side will be evaluated first</p>
+
+<p><strong>sound "bd"</strong> is a pattern of sound samples.</p>
+
+<p><strong>"bd"</strong> is a sample's or synth's name</p>
+
+<hr />
+
+<h1>How to play a pattern</h1>
+
+<p>Keep text cursor in-line and press <strong>[Shift] + [Enter]</strong>. This works like a ▶️ button.</p>
+
+<hr />
+
+<h1>How to play a pattern</h1>
+
+<p>Are you hearing something other than your breathing?</p>
+
+<h1>Yes?! You're <strong>On</strong>!</h1>
+
+<hr />
+
+<h1>Play/Stop on the keyboard</h1>
+
+<p><strong>Remember</strong></p>
+
+<p>1 line of code, place the cursor in-line and press <strong>[Shift] + [Enter]</strong></p>
+
+<p>1+ lines of code, place the cursor in-line anywhere and press <strong>[CTRL] + [Enter]</strong></p>
+
+<hr />
+
+<h1>How to silence a pattern</h1>
+
+<p>Ok, having a blast and everything, but now it is time stop it.</p>
+
+<p>To stop <strong>d1</strong> from playing</p>
+
+<p><code>haskell
+d1 silence
+</code>
+To stop all connections at once</p>
+
+<p><code>haskell
+hush
+</code></p>
+
+<hr />
+
+<h1>How to have silence among sounding samples</h1>
+
+<p><strong>~</strong> is a rest (silence). The absence of a sounding sample.</p>
+
+<p><code>haskell
+d1 $ sound "~ bd"
+</code></p>
+
+<hr />
+
+<h1>Identifying Samples</h1>
+
+<p><code>haskell
+d1 $ sound "bd"
+</code>
+<strong>bd</strong> is the name of the folder where the sample is.</p>
+
+<hr />
+
+<h1>Identifying Samples</h1>
+
+<p><code>haskell
+d1 $ sound "bd:1 bd:3 bd:4 hh"
+</code>
+Will play three different "bd" samples. The <strong>:</strong> followed by a number will id the sample and represents the file order within its folder. So,</p>
+
+<p><strong>bd:0</strong> is the same as <strong>bd</strong> representing the first sample.
+<strong>bd:4</strong> representing the fifth sample, and so forth.</p>
+
+<hr />
+
+<h2>Identifying Samples</h2>
+
+<h4><strong>This samples naming logic applies to all samples you have access to.</strong></h4>
+
+<hr />
+
+<h1><strong>'sound'</strong> pattern duration</h1>
+
+<p>You noticed that as soon as you played the <strong>sound</strong> pattern it started looping. TidayCycles predefines <strong>1 cycle per second</strong> or  <strong>120 beats per minute</strong>.</p>
+
+<p>```haskell
+cps(1) -- cycles per second</p>
+
+<p>bps(120/60) -- 2  beats per second</p>
+
+<p>d1 $ sound "bd:1" -- Will play one "bd:1" per cycle.</p>
+
+<p>bps(90/60) -- 90 bps</p>
+
+<p>d1 $ sound "lighter"
+```</p>
+
+<hr />
+
+<h1><strong>'sound'</strong> pattern duration</h1>
+
+<p><code>haskell
+d1 $ sound "bd bd bd bd"
+</code></p>
+
+<p>Will play one <strong>bd</strong> per 1/4 of a cycle, and four <strong>bd</strong> samples per cycle.</p>
+
+<hr />
+
+<h1>Patterns of patterns</h1>
+
+<p>Groups of patterns</p>
+
+<h3>[pattern1 [pattern2] ... pattern n]</h3>
+
+<p>```haskell
+d1 $ sound "bd [bd bd] bd bd" -- [1/4 [1/8 1/8] 1/4 1/4]
+-- the same as
+d1 $ sound "bd . bd bd . bd bd"</p>
+
+<p>d1 $ sound "808bd:1 [bd:5 bd:3] bd [bd bd:2]"</p>
+
+<p>d1 $ sound "bd:3 [jvbass jvbass] bd:4"</p>
+
+<pre><code>
+---
+
+#Patterns and polyrhythms
+
+Polyrhythms
+###[pattern 1, pattern 2, ..., pattern n]
+
+```haskell
+d1 $ sound "[bd, sn:3, numbers, hh:1]" -- play all at once 
+
+d1 $ sound "[bd bd bd, flick:6 flick:4 flick:6 flick:4]" -- polyrhythmic
+
+d1 $ sound "[bd, [sn:3 sn:3], numbers, hh:1]" -- play all at once with grouping
+</code></pre>
+
+<hr />
+
+<h1>Patterns varying per cycle</h1>
+
+<p>Varying per cycle</p>
+
+<h3>[<pattern 1 pattern 2 ... pattern n>]</h3>
+
+<p>```haskell
+d1 $ sound "<bd sn:3>" -- play each once per cycle</p>
+
+<p>d1 $ sound "<bd sn:3 numbers hh:1>"</p>
+
+<pre><code>
+---
+
+#__*__ to repeat **more** often a sample or pattern
+
+```haskell
+d1 $ sound "808bd:1 808bd:1 808bd:1 808bd:1"
+-- the same as 
+d1 $ sound "808bd:1*4"
+
+d1 $ sound "bd [sn sn]"  
+-- the same as 
+d1 $ sound "bd sn*2" 
+</code></pre>
+
+<hr />
+
+<h1><strong>/</strong> to repeat <strong>less</strong> often a sample or pattern</h1>
+
+<p>```haskell
+d1 $ sound "house:5/2" -- once per two cycles</p>
+
+<p>d1 $ sound "house house:5/2"
+```</p>
+
+<hr />
+
+<h1>Mix and match <strong>[ ] &lt; > * /</strong></h1>
+
+<p>Be more creative with your patterns.</p>
+
+<p>```haskell
+d1 $ sound "[bd ~, sn:1*2, ~ <co co*2>, hh:1/4]"</p>
+
+<p>d1 $ sound "[bd ~, ~ sn:1, <jvbass jvbass:1 bass3:2>*4]" -- wicked!</p>
+
+<pre><code>
+Knowing this, we are set to create great grooves!
+
+---
+
+#Programmatically selecting samples
+
+Saving time while typing samples id's
+
+```haskell
+-- way 1. Longer typing and error prone
+d1 $ sound "arpy arpy:4 arpy:7 arpy:10" -- Major 7 chord arpeggio 
+-- way 2
+d1 $ s "arpy*4" # n "0 4 7 10"
+-- way 3
+d1 $ n "0 4 7 10" # s "arpy"
+
+-- sequencing one octave up and down
+d1 $ n "0..7 6..1" # sound "supercomparator"
+</code></pre>
+
+<hr />
+
+<h1>Transforming a pattern with coding</h1>
+
+<p>To transform a pattern programmaticaly we use <strong>functions</strong>.</p>
+
+<p>```haskell
+d1 $ sound "[bd<em>2, bass3:2</em>4]"</p>
+
+<p>-- now twice as fast. 'fast' is the function and '2' is the amount of speed
+d1 $ fast 2 $ sound "[bd<em>2, bass3:2</em>4]"
+```</p>
+
+<hr />
+
+<h1>Transforming a pattern with coding</h1>
+
+<h3>Functions</h3>
+
+<h3><strong>slow</strong> ● <strong>fast</strong> ● <strong>rev</strong> ● <strong>every</strong></h3>
+
+<p>```haskell
+d1 $ slow 2 $ sound "[bd<em>2, bass3:2</em>4]" -- plays 2 times slower</p>
+
+<p>-- 2, 3, or 4 times faster, each value for each cycle
+d1 $ fast "<2 4 6>" $ sound "[bd<em>2, bass3:2</em>4]"</p>
+
+<p>-- for every 4 cycles, twice as fast
+d1 $ every 4 (fast 2) $ sound "[bd<em>2, bass3:2</em>4]"</p>
+
+<p>-- one cycle forward, one cycle backwards
+d1 $ every 2 (rev) $ sound "bd jvbass bd:1 jvbass:3"
+```</p>
+
+<hr />
+
+<h1>Using Effects</h1>
+
+<p>To add effects we use <strong>functions</strong> and <strong>#</strong> operator.</p>
+
+<p>```haskell
+d1 $ sound "arpy*16" # gain "0.8"</p>
+
+<pre><code>
+---
+
+# Using Effects
+
+###Functions
+###**gain** ● **pan** ● **vowel** ● **speed** 
+
+```haskell
+-- default and maximum volume is 1, 0.5 to set to middle
+d1 $ sound "arpy*16" # gain "0.5"
+
+-- stereo panning from left to right
+d1 $ sound "arpy*8" # pan "[0.0 0.5 1.0]/2"
+
+-- vowels timbers of pattern sounds
+d1 $ sound "[bd jvbass]*2" # vowel "[a o]"
+
+-- speeds up, down and reverse sample playing
+d1 $ sound "numbers:1" # speed "&lt;4 1 0.125 -1.3&gt;"
+</code></pre>
+
+<hr />
+
+<h1>Using Effects</h1>
+
+<h3>Functions</h3>
+
+<h3><strong>cutoff</strong> ● <strong>coarse</strong> ● <strong>room</strong> ● <strong>size</strong></h3>
+
+<p>```haskell
+--cuts off above 1000 Hz
+d1 $ n "[0..7][6..1]" # sound "supercomparator" # cutoff 1000</p>
+
+<p>-- downsizes audio resolution
+d1 $ n "[0..7]" # sound "supercomparator" # coarse 20</p>
+
+<p>-- chaining effects to add room and size to pattern's sound
+d1 $ n "[7..0]" # sound "supercomparator" # room 2 # size 0.5</p>
+
+<pre><code>
+---
+
+# Some extra examples
+
+
+
+```haskell
+-- 'sine1' is a sinusoidal curve sequence of decimal values from 0.0 to 1.0
+-- 'scale' rescales values, here from 0.0 - 1.0 to 100 - 3000 
+d1 $ sound "[bd &lt;jvbass:0*2 jvbass:1*2&gt;]*2" # slow 1.75 (cutoff (scale 100 3000 sine1))
+
+
+d1 $ n "[0..7]" # s "auto" # pan sine1
+
+
+d1 $ n "[0..7]" # s "house" # slow 1.75 (cutoff (scale 140 3000 sine1))
+
+-- 'tri1' is a triangle curve sequence of decimal values 
+d1 $ sound "[padlong, linnhats*3]" 
+# crush "&lt;4 10&gt;/4"   
+# slow 8 (bpf (scale 500 5000 tri1))   
+# slow 4 (bandq (scale 1 30 tri1)) 
+</code></pre>
+
+<hr />
+
+<h1>Where to go for more</h1>
+
+<ul>
+<li><a href="https://tidalcycles.org/"><strong>TidalCycles</strong> Website - tidalcycles.org</a> <strong>Manual</strong></li>
+<li><a href="https://slack.com"><strong>slack</strong> Live coding team - slack.com</a> <strong>Community</strong></li>
+<li><a href="http://lurk.org"><strong>LURK</strong> - lurk.org</a> <strong>Community</strong></li>
+<li><a href="https://toplap.org"><strong>toplap</strong> - toplap.org</a> <strong>Live Coding Organization</strong></li>
+<li><a href="https://www.youtube.com/results?search_query=tidalcycles">Youtube</a></li>
+<li><a href="https://vimeo.com/search?q=tidalcycles">Vimeo</a></li>
+</ul>
+
+
+<hr />
+
+<h1>Enjoy the awsomeness of making music while programming</h1>
+
+<p>by <img src="twitter.png" alt="inline" /> @pd3v_</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Domain-Specific Language - a programming language which is created based on a more a general purpose programming language. For this matter <strong>Haskell</strong>.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>d1 to d9 connections available.  <a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</body>
+</html>
